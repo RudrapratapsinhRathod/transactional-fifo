@@ -30,5 +30,6 @@ The design was verified using a 12-stage, fully automated self-checking testbenc
 
 ## Author
 **Rudrapratapsinh Rathod**  
-Student ID: 202404053  
+**Vishv Gorasiya**
+**Jeet Sakariya**
 Dhirubhai Ambani University(DAU)
