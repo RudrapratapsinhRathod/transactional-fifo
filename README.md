@@ -3,15 +3,15 @@
 ## Overview
 This repository contains the RTL design and verification environment for a Synchronous Transactional FIFO. Unlike a standard FIFO, this architecture features a transactional memory engine that allows for speculative data writing. It supports `commit` operations to make staged data official, and `rollback` operations to instantly discard uncommitted data without corrupting the memory array.
 
-## Architecture Diagram
-![Transactional FIFO Architecture](ChatGPT Image Aug 24, 2026 at 02_23_19 AM.png)
+
 
 ## Key Features
 *   **Speculative Execution:** Separate actual and speculative write pointers allow blocks of data to be staged before committing.
 *   **Hardware Rollback:** An active-high `rollback` signal instantly purges uncommitted data via single-cycle pointer realignment.
 *   **Dual-Port Concurrency:** Inferred dual-port RAM seamlessly handles simultaneous read and write collisions.
 *   **Robust Protection:** Native hardware gating prevents read underflow and write overflow memory corruption.
-
+## System Architecture 
+![Transactional FIFO Architecture](ChatGPT Image Aug 24, 2026 at 02_23_19 AM.png)
 ## Results & KPIs
 *   **Low Area Footprint:** Used just 26 LUTs (0.04% of a standard FPGA), keeping the logic highly efficient.
 *   **Solid Speed:** Synthesized with a minimal datapath delay of ~7.6 ns, allowing the FIFO to comfortably operate at ~131 MHz.
