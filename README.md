@@ -3,6 +3,9 @@
 ## Overview
 This repository contains the RTL design and verification environment for a Synchronous Transactional FIFO. Unlike a standard FIFO, this architecture features a transactional memory engine that allows for speculative data writing. It supports `commit` operations to make staged data official, and `rollback` operations to instantly discard uncommitted data without corrupting the memory array.
 
+## Architecture Diagram
+![Transactional FIFO Architecture](ChatGPT Image Aug 24, 2026 at 02_23_19 AM.png)
+
 ## Key Features
 *   **Speculative Execution:** Separate actual and speculative write pointers allow blocks of data to be staged before committing.
 *   **Hardware Rollback:** An active-high `rollback` signal instantly purges uncommitted data via single-cycle pointer realignment.
@@ -28,7 +31,9 @@ The design was verified using a 12-stage, fully automated self-checking testbenc
 *   `/tb` - Contains the automated self-checking testbench (`tb_transactional_fifo.v`).
 *   `/results` - Contains Vivado synthesis schematics, performance reports, and the 0-error simulation waveform.
 
-## Author
-**Rudrapratapsinh Rathod**  
-Student ID: 202404053  
-Dhirubhai Ambani University(DAU)
+## Authors
+*   **Rudrapratapsinh Rathod**
+*   **Vishv Gorasiya**
+*   **Jeet Sakariya**
+
+Dhirubhai Ambani University (DAU)
