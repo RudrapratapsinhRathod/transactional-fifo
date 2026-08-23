@@ -3,8 +3,6 @@
 ## Overview
 This repository contains the RTL design and verification environment for a Synchronous Transactional FIFO. Unlike a standard FIFO, this architecture features a transactional memory engine that allows for speculative data writing. It supports `commit` operations to make staged data official, and `rollback` operations to instantly discard uncommitted data without corrupting the memory array.
 
-This project was developed as part of the B.Tech Electronics and VLSI Design and Technology coursework at DAU.
-
 ## Key Features
 *   **Speculative Execution:** Separate actual and speculative write pointers allow blocks of data to be staged before committing.
 *   **Hardware Rollback:** An active-high `rollback` signal instantly purges uncommitted data via single-cycle pointer realignment.
