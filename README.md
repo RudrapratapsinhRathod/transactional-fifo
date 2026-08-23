@@ -14,7 +14,7 @@ This repository contains the RTL design and verification environment for a Synch
 ![Transactional FIFO Architecture](architecture_diagram.png)
 ## Results & KPIs
 *   **Low Area Footprint:** Used just 26 LUTs (0.04% of a standard FPGA), keeping the logic highly efficient.
-*   **Solid Speed:** Synthesized with a minimal datapath delay of ~7.6 ns, allowing the FIFO to comfortably operate at ~131 MHz.
+*   **Solid Speed:** Synthesized with a minimal datapath delay of ~5.814 ns, allowing the FIFO to comfortably operate at ~171 MHz.
 *   **True Core Power:** Draws approximately 325 mW dynamically (isolating the internal silicon logic from unoptimized external I/O pad overhead).
 
 ## Testing & Verification Methodology
